@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 
-// دوال للتحويل بين الوحدات
+
 double toKilometers(double meters) {
     return meters / 1000.0;
 }
@@ -22,7 +22,6 @@ double toMetersFromMiles(double miles) {
     return miles / 0.000621371;
 }
 
-// ألوان باستخدام رموز ANSI
 #define RESET   "\033[0m"
 #define RED     "\033[31m"
 #define GREEN   "\033[32m"
@@ -49,7 +48,7 @@ int main() {
     cin >> choice;
 
     switch (choice) {
-        case 1: // حساب السرعة النهائية
+        case 1: 
             cout << CYAN << "Enter acceleration (a), time (t), and initial velocity (Vi):\n" << RESET;
             cin >> a >> t >> Vi;
             Vf = Vi + (a * t);
@@ -65,10 +64,10 @@ int main() {
             }
             break;
 
-        case 2: // حساب المسافة المقطوعة
+        case 2: 
             cout << CYAN << "Enter initial velocity (Vi), final velocity (Vf), acceleration (a), and time (t):\n" << RESET;
             cin >> Vi >> Vf >> a >> t; 
-            d = (0.5 * a * (t * t)) + (Vi * t); // استخدام 0.5 بدلاً من 1/2
+            d = (0.5 * a * (t * t)) + (Vi * t); 
             cout << MAGENTA << "Distance (d): " << d << " meters\n" << RESET;
             cout << "Convert to (km, cm, miles)? ";
             cin >> unit_choice;
@@ -81,7 +80,7 @@ int main() {
             }
             break;
 
-        case 3: // حساب الزمن المستغرق
+        case 3: 
             cout << CYAN << "Enter final velocity (Vf), initial velocity (Vi), and acceleration (a):\n" << RESET;
             cin >> Vf >> Vi >> a;
             if (a == 0) {
@@ -92,7 +91,7 @@ int main() {
             }
             break;
 
-        case 4: // حساب التسارع
+        case 4: 
             cout << CYAN << "Enter final velocity (Vf), initial velocity (Vi), and time (t):\n" << RESET;
             cin >> Vf >> Vi >> t;
             if (t == 0) {
@@ -103,7 +102,7 @@ int main() {
             }
             break;
 
-        case 5: // حساب المسافة باستخدام معادلة الحركة
+        case 5: 
             cout << CYAN << "Enter initial velocity (Vi), acceleration (a), and time (t):\n" << RESET;
             cin >> Vi >> a >> t;
             s = (Vi * t) + (0.5 * a * t * t);
@@ -119,7 +118,7 @@ int main() {
             }
             break;
 
-        default: // إذا كان الإدخال غير صحيح
+        default:
             cout << RED << "Invalid choice. Please try again.\n" << RESET;
             break;
     }
